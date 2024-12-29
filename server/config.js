@@ -10,28 +10,28 @@ const prizes = [
     count: 1,
     text: "Giải nhất",
     title: "Giải nhất",
-    img: "../img/1.png"
+    img: "../img/prize/prize-01.jpg"
   },
   {
     type: 2,
     count: 2,
     text: "Giải nhì",
     title: "Giải nhì",
-    img: "../img/2.png"
+    img: "../img/prize/prize-02.jpg"
   },
   {
     type: 3,
     count: 3,
     text: "Giải ba",
     title: "Giải ba",
-    img: "../img/3.png"
+    img: "../img/prize/prize-03.jpg"
   },
   {
     type: 4,
     count: 15,
     text: "Giải khuyến khích",
     title: "Giải khuyến khích",
-    img: "../img/5.png"
+    img: "../img/prize/prize-04.jpg"
   },
 ];
 
