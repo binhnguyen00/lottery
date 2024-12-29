@@ -72,9 +72,9 @@ a {
 }
 
 .element .dev-img {
-  width: 11vh;
-  height: 11vh;
-  margin: 0 auto;
+  /* width: 11vh;
+  height: 11vh; */
+  /* margin: 0 auto; */
 }
 .element .company {
   position: relative;
@@ -103,7 +103,7 @@ a {
   /*left: 0;*/
   /*right: 0;*/
   margin-top: 2px;
-  font-size: 1vh;
+  font-size: 1.5vh;
   color: rgba(127, 255, 255, 0.75);
 }
 .element .company .x-prize {
@@ -167,7 +167,7 @@ button:active {
 
 .prize.element {
   /* transition: background-color 1.5s ease-in 0.3s; */
-  height: 18vh;
+  /* height: 18vh; */
   background: #ffffffcf !important;
   box-shadow: 0 0 12px #192a56;
 }
@@ -504,11 +504,13 @@ button:active {
 }
 
 .prize-shine {
-  font-size: 5vh;
+  font-size: 4rem;
   font-weight: bold;
-  color: rgba(253, 105, 0, 0.95);
+  color: rgb(221, 0, 0);
   vertical-align: middle;
-  padding: 0 6px;
+  padding: 5px;
+  text-transform: uppercase;
+  text-shadow: 0.5px 0.5px #000;
 }
 
 .qipao-container {
@@ -538,7 +540,7 @@ button:active {
   z-index: 5;
 }
 
-.logoITC {
+.logo-mobifone {
   position: fixed;
   top: 1vh;
   right: 5vh;

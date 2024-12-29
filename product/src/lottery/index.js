@@ -312,9 +312,6 @@ function switchScreen(type) {
   }
 }
 
-/**
- * 创建元素
- */
 function createElement(css, text) {
   let dom = document.createElement("div");
   dom.className = css || "";
@@ -322,9 +319,6 @@ function createElement(css, text) {
   return dom;
 }
 
-/**
- * 创建名牌
- */
 function createCard(user, isBold, id, showTable) {
   var element = createElement();
   element.id = "card-" + id;
@@ -383,11 +377,8 @@ function addHighlight() {
   });
 }
 
-/**
- * 渲染地球等
- */
 function transform(targets, duration) {
-  // TWEEN.removeAll();
+  TWEEN.removeAll();
   for (var i = 0; i < threeDCards.length; i++) {
     var object = threeDCards[i];
     var target = targets[i];
@@ -416,14 +407,14 @@ function transform(targets, duration) {
       .easing(TWEEN.Easing.Exponential.InOut)
       .start();
 
-    // new TWEEN.Tween(object.rotation)
-    //     .to({
-    //         x: target.rotation.x,
-    //         y: target.rotation.y,
-    //         z: target.rotation.z
-    //     }, Math.random() * duration + duration)
-    //     .easing(TWEEN.Easing.Exponential.InOut)
-    //     .start();
+    new TWEEN.Tween(object.rotation)
+        .to({
+            x: target.rotation.x,
+            y: target.rotation.y,
+            z: target.rotation.z
+        }, Math.random() * duration + duration)
+        .easing(TWEEN.Easing.Exponential.InOut)
+        .start();
   }
 
   new TWEEN.Tween(this)
@@ -593,9 +584,12 @@ function showCard(idx, locates, duration, tag) {
     // object.element.append('<img id="theImg" src="img/highlight_background_remove.jpg" />')
     object.element.innerHTML += `
         <div class="name">${currentLuckys[idx][1]}</div>
-            <div class="details">
-                ${currentLuckys[idx][2] || "Mobi"}
-            </div>
+          <div class="details">
+            ${currentLuckys[idx][4] || "MobiFone"}
+          </div>
+          <div class="details">
+            ${currentLuckys[idx][2] || "MobiFone"}
+          </div>
         `;
     // object.element.style.backgroundImage =
     //   'url("img/highlight_background_remove.jpg")';
@@ -703,10 +697,12 @@ function resetCard(duration = 500) {
           object.element.classList.remove("prize");
           const value = selectedCard.findIndex((item) => item.id === index);
           console.log(value);
-          object.element.innerHTML = `
-            <div class="dev-img" style="background: url('${selectedCard[value].info[3]}') no-repeat top center;
-            background-size: cover;"></div>
-            `;
+          /** Card Avatar
+            object.element.innerHTML = `
+              <div class="dev-img" style="background: url('${selectedCard[value].info[3]}') no-repeat top center;
+              background-size: cover;"></div>
+              `;
+           */      
         });
         resolve();
       });
@@ -843,10 +839,13 @@ function findLessPrize(leftUser, currentPrize) {
 
 function changeCard(cardIndex, user) {
   let card = threeDCards[cardIndex].element;
-
+  // style="background: url('${user[3]}') no-repeat top center;background-size: cover;"
   card.innerHTML = `
-    <div class="dev-img" style="background: url('${user[3]}') no-repeat top center;
-  background-size: cover;"></div>`;
+    <div 
+      class="dev-img" 
+    >
+    </div>
+  `;
 }
 
 /**

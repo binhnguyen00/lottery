@@ -162,7 +162,8 @@ function showPrizeList(currentPrizeIndex) {
   if (currentPrize.type === defaultType) {
     currentPrize.count === "不限制";
   }
-  let htmlCode = `<div class="prize-mess">Giải thưởng<label id="prizeType" class="prize-shine">${currentPrize.text}</label>，số giải còn lại<label id="prizeLeft" class="prize-shine">${currentPrize.count}</label></div><ul class="prize-list">`;
+  let htmlCode = `
+    <div class="prize-mess"><label id="prizeType" class="prize-shine">${currentPrize.text}</label><span class="prize-shine">Còn: </><label id="prizeLeft" class="prize-shine" style="color:rgb(6, 0, 183);">${currentPrize.count}</label></div><ul class="prize-list">`;
   prizes.forEach((item) => {
     if (item.type === defaultType) {
       return true;
