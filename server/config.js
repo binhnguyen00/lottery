@@ -14,39 +14,32 @@ const prizes = [
   },
   {
     type: 2,
-    count: 3,
+    count: 2,
     text: "Giải nhì",
     title: "Giải nhì",
     img: "../img/2.png"
   },
   {
     type: 3,
-    count: 5,
+    count: 3,
     text: "Giải ba",
     title: "Giải ba",
     img: "../img/3.png"
   },
   {
     type: 4,
-    count: 10,
-    text: "Giải tư",
-    title: "Giải tư",
-    img: "../img/4.png"
-  },
-  {
-    type: 5,
-    count: 100,
+    count: 15,
     text: "Giải khuyến khích",
     title: "Giải khuyến khích",
     img: "../img/5.png"
   },
-
 ];
 
 /**
- * 一Số giải mỗi lần quay
+ * Số giải mỗi lần quay
+ * Giải Khuyến Khích quay -5 giải
  */
-const EACH_COUNT = [1, 1, 1, 1, 10, 10];
+const EACH_COUNT = [1, 1, 1, 1, 5];
 
 const COMPANY = "MOBIFONE";
 

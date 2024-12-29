@@ -937,19 +937,21 @@ function reset() {
 }
 
 function createHighlight() {
-  let year = "01234";
+  let year = "012345"; // Include the complete sequence
   let step = 6,
     xoffset = 1,
     yoffset = 0,
     highlight = [];
 
   year.split("").forEach((n) => {
-    highlight = highlight.concat(
-      NUMBER_MATRIX[n].map((item) => {
-        return `${item[0] + xoffset}-${item[1] + yoffset}`;
-      })
-    );
-    xoffset += step;
+    if (NUMBER_MATRIX[n]) {
+      highlight = highlight.concat(
+        NUMBER_MATRIX[n].map((item) => {
+          return `${item[0] + xoffset}-${item[1] + yoffset}`;
+        })
+      );
+    }
+    xoffset += step; // Increment xoffset after processing the character
   });
 
   return highlight;
