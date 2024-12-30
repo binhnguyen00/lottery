@@ -764,10 +764,10 @@ function lottery() {
 }
 
 function calcDuration(typePrize) {
-  if (typePrize === 1) return 40000;
-  if (typePrize === 2) return 20000;
-  if (typePrize === 3) return 14000;
-  return 8000;
+  if (typePrize === 1) return 15000;
+  if (typePrize === 2) return 10000;
+  if (typePrize === 3) return 7000;
+  return 5000;
 }
 /**
  * Lưu kết quả rút thăm cuối
