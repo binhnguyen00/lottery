@@ -39,7 +39,7 @@ const prizes = [
  * Số giải mỗi lần quay
  * Giải Khuyến Khích quay -5 giải
  */
-const EACH_COUNT = [1, 1, 1, 3, 10];
+const EACH_COUNT = [1, 1, 1, 1, 5];
 
 const COMPANY = "MOBIFONE";
 
